@@ -7,7 +7,7 @@ public class Input {
 	static Scanner input = new Scanner (System.in); 
 		
 	public static byte readByte(String message) {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		byte value = 0; 
 		
 		do {
@@ -17,7 +17,6 @@ public class Input {
 				incorrect = false; 
 				System.out.println("Correcte."); 
 			} catch (InputMismatchException e) {
-				incorrect = true; 
 				System.out.println("Error, introdueix una edat vàlida.\n"); 
 			} 
 			input.nextLine(); 
@@ -26,7 +25,7 @@ public class Input {
 	}
 
 	public static int readInt(String message) {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		int value = 0; 
 		
 		do {
@@ -36,7 +35,6 @@ public class Input {
 				incorrect = false; 
 				System.out.println("Correcte."); 
 			} catch (InputMismatchException e) {
-				incorrect = true; 
 				System.out.println("Error, introdueix el teu DNI sense la lletra final.\n"); 
 			} 
 			input.nextLine(); 
@@ -45,7 +43,7 @@ public class Input {
 	}
 
 	public static float readFloat(String message){
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		float value = 0.0f; 
 		
 		do {
@@ -55,7 +53,6 @@ public class Input {
 				incorrect = false; 
 				System.out.println("Correcte."); 
 			} catch (InputMismatchException e) {
-				incorrect = true; 
 				System.out.println("Error de format, introdueix els decimals amb una coma.\n"); 
 			} 
 			input.nextLine(); 
@@ -64,7 +61,7 @@ public class Input {
 	}
 
 	public static double readDouble(String message) {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		double value = 0.0f; 
 		
 		do {
@@ -73,8 +70,7 @@ public class Input {
 				value = input.nextDouble();   
 				incorrect = false; 
 				System.out.println("Correcte."); 
-			} catch (InputMismatchException e) {
-				incorrect = true; 
+			} catch (InputMismatchException e) { 
 				System.out.println("Error de format, introdueix els decimals amb una coma.\n"); 
 			} 
 			input.nextLine(); 
@@ -83,7 +79,7 @@ public class Input {
 	}
 	
 	public static char readChar(String message)  {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		char inputChar = 'A'; 
 		String inputString = ""; 
 		
@@ -99,7 +95,6 @@ public class Input {
 				}
 			} catch (Exception e) {
 				System.out.println("Error, introdueix només un caràcter.");
-				incorrect = true; 
 			}
 		} while (incorrect);
 		
@@ -108,7 +103,7 @@ public class Input {
 	}
 
 	public static String readString(String message) {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		String inputString = ""; 
 		int at = 0; 
 		boolean dot = false; 
@@ -137,7 +132,6 @@ public class Input {
 				}
 			} catch (Exception e) { 
 				System.out.println("Error, introdueix un correu electrònic vàlid.\n"); 
-				incorrect = true; 
 			} 
 		} while (incorrect); 
 		
@@ -146,7 +140,7 @@ public class Input {
 	}
 
 	public static boolean readYesNo(String message) {
-		boolean incorrect = false; 
+		boolean incorrect = true; 
 		boolean inputBoolean = false; 
 		String inputString = ""; 
 		
@@ -165,8 +159,7 @@ public class Input {
 					throw new Exception(); 
 				}
 			} catch (Exception e) {
-				System.out.println("Error, introdueix S o N en cas afirmatiu o negatiu.");
-				incorrect = true; 
+				System.out.println("Error, introdueix S o N en cas afirmatiu o negatiu."); 
 			}
 		} while (incorrect);
 		
