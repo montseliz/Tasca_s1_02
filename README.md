@@ -26,7 +26,7 @@ a l’hora d’introduir dades per teclat utilitzant la classe Scanner.
 El primer que s’ha de fer és instanciar un objecte de la classe Scanner i a partir d’aquí, crear mètodes estàtics per llegir 
 els diferents tipus de dades des del teclat. 
 
- Important
+ Important:
 
 És important que si en algun mètode salta una excepció, la tractem i tornem a demanar la dada a l’usuari/ària fins que aquesta estigui ben introduïda. 
 Per exemple: Si introdueix un float amb un punt en lloc d'amb una coma, ha de mostrar “Error de format”. 
